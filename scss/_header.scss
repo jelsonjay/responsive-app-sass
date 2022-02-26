@@ -22,9 +22,9 @@
 .header {
 	display: flex;
 	height: 90px;
-	justify-content: space-between;
+	justify-content: space-around;
 	border-bottom: 0.2rem solid variables.$primary;
-	max-width: 80rem;
+	width: 100%;
 	margin: 0 auto;
 	background-color: variables.$whitesmoke;
 	//padding: 0.5rem calc((100vw - 1200) / 2);
