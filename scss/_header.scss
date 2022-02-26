@@ -1,0 +1,91 @@
+@use 'variables';
+@import 'media-queries';
+
+%align-center {
+	display: flex;
+	align-items: center;
+}
+
+%btn {
+	border-radius: 0.5rem;
+	border: none;
+	outline: none;
+	font-size: 1rem;
+	cursor: pointer;
+	padding: 0.75rem 1.5rem;
+	margin-bottom: 0.8rem;
+	margin-right: 0.8rem;
+	font-weight: 400;
+	font-family: variables.$font-f;
+}
+
+.header {
+	display: flex;
+	height: 90px;
+	justify-content: space-between;
+	border-bottom: 0.2rem solid variables.$primary;
+	max-width: 80rem;
+	margin: 0 auto;
+	background-color: variables.$whitesmoke;
+	padding: 0.5rem calc((100vw - 1200) / 2);
+	position: relative;
+	z-index: 2;
+
+	&__logo {
+		color: variables.$primary;
+		font-size: variables.$font-h3;
+		font-weight: 600;
+		font-family: variables.$font-f;
+		@extend %align-center;
+	}
+	&__bars {
+		opacity: 0;
+		@include tablet {
+			color: variables.$dark;
+			position: absolute;
+			opacity: 1;
+			right: 1.5rem;
+			top: 1.25rem;
+			font-size: variables.$font-h2;
+		}
+	}
+
+	&__nav {
+		@extend %align-center;
+		@include tablet {
+			display: none;
+		}
+		&--links {
+			color: variables.$dark;
+			font-weight: 400;
+			text-transform: uppercase;
+			justify-content: center;
+			padding: 0 1rem;
+			font-family: variables.$font-f;
+		}
+		&--links:hover {
+			color: variables.$primary;
+			transition: all 0.5s ease;
+		}
+
+		#button {
+			@extend %btn;
+			background-color: variables.$primary;
+			color: variables.$white;
+
+			&:hover {
+				background-color: variables.$secondary;
+				transition: all 0.5s ease;
+				color: variables.$dark;
+			}
+		}
+	}
+	&__nav ul {
+		@extend %align-center;
+		text-align: center;
+		margin-right: 1.25rem;
+	}
+	&__nav li {
+		margin: 1rem;
+	}
+}
