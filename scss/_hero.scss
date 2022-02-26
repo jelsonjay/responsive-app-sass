@@ -1,35 +1,20 @@
-//@use 'variables';
 @use 'variables';
-@import 'header';
 @import 'media-queries';
-@import 'wrapper';
-
-// reset
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-a {
-	text-decoration: none;
-}
-ul {
-	list-style: none;
-}
 
 .hero {
-	max-width: 80rem;
-	margin: 0 auto;
+	background-color: variables.$whitesmoke;
 	&__container {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: repeat(2, 1fr);
 		align-items: center;
 		justify-content: center;
+		margin: 0 auto;
 		height: 90vh;
-		width: 100%;
+		widows: 100%;
+		max-width: 1200px;
 		margin-left: 1.25rem;
 		margin-right: 1.25rem;
-		z-index: 10;
+		z-index: 1;
 
 		@include tablet {
 			grid-template-columns: 1fr;
