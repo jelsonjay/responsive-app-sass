@@ -38,7 +38,7 @@
 .header__bars {
   opacity: 0;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .header__bars {
     color: #36454f;
     position: absolute;
@@ -48,7 +48,7 @@
     font-size: 2.5rem;
   }
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .header__nav {
     display: none;
   }
@@ -85,8 +85,8 @@
 .wrap {
   max-width: 70rem;
   margin: 0 auto;
-  background-color: chocolate;
   margin-top: 4rem;
+  margin-bottom: 5rem;
 }
 
 * {
@@ -118,33 +118,32 @@ ul {
   margin-right: 1.25rem;
   z-index: 10;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .hero__container {
     grid-template-columns: 1fr;
     height: 100%;
+    width: 100%;
   }
 }
 .hero__container--left {
   width: 100%;
   line-height: 1.2;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .hero__container--left {
     padding: 5rem 0;
   }
 }
-@media (max-width: 280px) {
+@media screen and (max-width: 280px) {
   .hero__container--left {
     line-height: 1.5;
   }
 }
 .hero__container--left h1 {
-  font-size: 4rem;
-  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5rem;
   color: #6c63ff;
-  font-weight: 900;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 280px) {
   .hero__container--left h1 {
     font-size: 1.5rem;
   }
@@ -155,7 +154,7 @@ ul {
   color: #6c63ff;
   font-weight: 900;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .hero__container--left h2 {
     font-size: 1.5rem;
   }

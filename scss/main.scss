@@ -32,8 +32,10 @@ ul {
 		z-index: 10;
 
 		@include tablet {
+			//grid-template-columns: repeat(auto-fill, minmax(20rem 1fr));
 			grid-template-columns: 1fr;
 			height: 100%;
+			width: 100%;
 		}
 
 		&--left {
@@ -50,11 +52,9 @@ ul {
 		}
 
 		&--left h1 {
-			font-size: variables.$font-h1;
-			font-family: variables.$font-f;
+			font-size: 1.5rem;
 			color: variables.$primary;
-			font-weight: 900;
-			@include tablet {
+			@include mobile {
 				font-size: 1.5rem;
 			}
 		}
