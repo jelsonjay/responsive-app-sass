@@ -28,6 +28,10 @@ ul {
 	margin-right: 0.8rem;
 	font-weight: 400;
 	font-family: variables.$font-f;
+	color: variables.$white;
+	background-color: variables.$primary;
+	position: relative;
+	transition: all 0.3s ease;
 }
 
 .hero {
@@ -66,6 +70,7 @@ ul {
 		&--left h1 {
 			font-size: 1.5rem;
 			color: variables.$primary;
+			font-family: variables.$font-f;
 			@include mobile {
 				font-size: 1.5rem;
 			}
@@ -84,6 +89,34 @@ ul {
 			font-size: variables.$font-p;
 			font-family: variables.$font-f;
 			margin-top: 2rem;
+			color: variables.$whitesmoke;
+		}
+		&--btn a {
+			position: relative;
+			background-color: variables.$secondary;
+			color: variables.$dark;
+			z-index: 2;
+		}
+		&--btn:after {
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			transition: all 0.3s;
+			border-radius: 0.5rem;
+			background-color: blueviolet;
+		}
+		&--btn:hover:after {
+			width: 100%;
+		}
+		&--right {
+			text-align: center;
+		}
+		&--img {
+			height: 100%;
+			width: 100%;
 		}
 	}
 }

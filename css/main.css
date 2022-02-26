@@ -89,6 +89,16 @@
   margin-top: 4rem;
   margin-bottom: 5rem;
 }
+@media screen and (max-width: 768px) {
+  .wrap {
+    margin: 1.25rem;
+  }
+}
+@media screen and (max-width: 280px) {
+  .wrap {
+    margin: 3.25rem;
+  }
+}
 .wrap h1 {
   font-size: 3.25rem;
   margin-bottom: 1.25rem;
@@ -124,6 +134,10 @@ ul {
   margin-right: 0.8rem;
   font-weight: 400;
   font-family: "Kumbh Sans", sans-serif;
+  color: #fff;
+  background-color: #6c63ff;
+  position: relative;
+  transition: all 0.3s ease;
 }
 
 .hero {
@@ -164,6 +178,7 @@ ul {
 .hero__container--left h1 {
   font-size: 1.5rem;
   color: #6c63ff;
+  font-family: "Kumbh Sans", sans-serif;
 }
 @media screen and (max-width: 280px) {
   .hero__container--left h1 {
@@ -184,6 +199,34 @@ ul {
   font-size: 1rem;
   font-family: "Kumbh Sans", sans-serif;
   margin-top: 2rem;
+  color: #f5f5f5;
+}
+.hero__container--btn a {
+  position: relative;
+  background-color: #63f8ff;
+  color: #36454f;
+  z-index: 2;
+}
+.hero__container--btn:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transition: all 0.3s;
+  border-radius: 0.5rem;
+  background-color: blueviolet;
+}
+.hero__container--btn:hover:after {
+  width: 100%;
+}
+.hero__container--right {
+  text-align: center;
+}
+.hero__container--img {
+  height: 100%;
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
